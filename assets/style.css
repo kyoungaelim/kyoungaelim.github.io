@@ -41,12 +41,14 @@ h2{margin:0 0 18px;font-family:var(--display);font-size:22px;font-weight:600;dis
 h2 .count{margin-left:auto;font:400 12px var(--mono);color:var(--muted)}
 .stack{display:flex;flex-direction:column;gap:52px}
 
-/* 홈 */
-.hero{display:grid;grid-template-columns:280px minmax(0,1fr);gap:56px;align-items:start}
-.card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px}
-.photo{width:180px;height:180px;border-radius:50%;object-fit:cover;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-size:64px;font-weight:700;overflow:hidden}
+/* 홈: 위쪽 가로 프로필 띠 + 아래 논문 */
+.hero{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
+.card{display:grid;grid-template-columns:112px minmax(0,1fr);column-gap:24px;row-gap:4px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.card .photo{grid-row:span 4}
+.card .links{justify-content:flex-start}
+.photo{width:112px;height:112px;border-radius:50%;object-fit:cover;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-size:44px;font-weight:700;overflow:hidden}
 .photo img{width:100%;height:100%;object-fit:cover}
-.card h1{margin:6px 0 0;font-family:var(--display);font-size:30px;line-height:1.25}
+.card h1{margin:0;font-family:var(--display);font-size:32px;line-height:1.25;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .card .en{color:var(--muted);font-size:14px;letter-spacing:.04em}
 .card .role{margin:0;font-size:14px;color:var(--muted)}
 .links{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin-top:4px}
@@ -117,7 +119,6 @@ section{scroll-margin-top:84px}
 .site-foot{border-top:1px solid var(--line);padding-block:24px;font-size:12px;color:var(--muted)}
 
 @media (max-width:860px){
-  .hero{grid-template-columns:minmax(0,1fr);gap:32px}
   .cv-layout{grid-template-columns:minmax(0,1fr);gap:24px}
   .toc{position:static}
   .toc ul{display:flex;flex-wrap:wrap;gap:6px;border-left:0}
@@ -125,6 +126,9 @@ section{scroll-margin-top:84px}
 }
 @media (max-width:600px){
   .two,.research,.featured{grid-template-columns:minmax(0,1fr)}
+  .card{grid-template-columns:72px minmax(0,1fr);column-gap:16px}
+  .photo{width:72px;height:72px;font-size:30px}
+  .card h1{font-size:26px}
   .row{grid-template-columns:minmax(0,1fr);gap:2px}
   .year-group{grid-template-columns:minmax(0,1fr);gap:0}
   .year{padding-top:4px}
