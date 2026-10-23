@@ -45,7 +45,7 @@ document.querySelectorAll(".copy").forEach(btn=>{
   });
 });
 
-const pubHTML = p => `<li class="pub"><div class="t">${p.t}${p.tags.length?`<span class="tags">${p.tags.map(t=>`<span class="tag">${t}</span>`).join("")}</span>`:""}</div><div class="a">${p.a}</div><div class="j"><i>${p.j}</i>${p.v?", "+p.v:""}</div></li>`;
+const pubHTML = p => `<li class="pub"><div class="t">${p.t}</div><div class="a">${p.a}</div><div class="j"><i>${p.j}</i>${p.v?", "+p.v:""}</div></li>`;
 
 // 홈: 대표 논문
 const feat = document.getElementById("featured");
