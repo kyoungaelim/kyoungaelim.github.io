@@ -43,11 +43,11 @@ h2 .count{margin-left:auto;font:400 12px var(--mono);color:var(--muted)}
 
 /* 홈: 위쪽 가로 프로필 띠 + 아래 논문 */
 .hero{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
-.card{display:grid;grid-template-columns:112px minmax(0,1fr);column-gap:24px;row-gap:4px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
+.card{display:grid;grid-template-columns:150px minmax(0,1fr);column-gap:24px;row-gap:4px;align-items:center;padding-bottom:28px;border-bottom:1px solid var(--line)}
 .card .photo{grid-row:span 4}
 .card .links{justify-content:flex-start}
-.photo{width:112px;height:112px;border-radius:50%;object-fit:cover;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-size:44px;font-weight:700;overflow:hidden}
-.photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.photo{width:150px;height:200px;border-radius:8px;object-fit:cover;background:var(--accent);color:var(--bg);display:grid;place-items:center;font-family:var(--display);font-size:44px;font-weight:700;overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;object-position:center top}
 .card h1{margin:0;font-family:var(--display);font-size:32px;line-height:1.25;display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
 .card .en{color:var(--muted);font-size:14px;letter-spacing:.04em}
 .card .role{margin:0;font-size:14px;color:var(--muted)}
@@ -126,8 +126,8 @@ section{scroll-margin-top:84px}
 }
 @media (max-width:600px){
   .two,.research,.featured{grid-template-columns:minmax(0,1fr)}
-  .card{grid-template-columns:72px minmax(0,1fr);column-gap:16px}
-  .photo{width:72px;height:72px;font-size:30px}
+  .card{grid-template-columns:96px minmax(0,1fr);column-gap:16px}
+  .photo{width:96px;height:128px}
   .card h1{font-size:26px}
   .row{grid-template-columns:minmax(0,1fr);gap:2px}
   .year-group{grid-template-columns:minmax(0,1fr);gap:0}

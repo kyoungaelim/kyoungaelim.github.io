@@ -1,6 +1,6 @@
 // 논문 목록 (홈 대표 논문, 논문 페이지에서 함께 사용)
 const PUBS = [
-  {y:2026, a:"Yoo, S., Kim, S., <strong>Lim, K.</strong>, & Lee, Y.", t:"Training investment indicators beyond cost", j:"International Journal of Human Resource Management", v:"", tags:[], featured:true},
+  {y:2026, a:"Yoo, S., Kim, S., <strong>Lim, K.</strong>, & Lee, Y.", t:"Training investment indicators beyond cost: analyzing the impact of training on organizational outcomes", j:"The International Journal of Human Resource Management", v:"37(11)", tags:[], featured:true},
   {y:2026, a:"<strong>임경애</strong>", t:"2차 베이비부머 근로자의 일중독과 직무만족의 관계", j:"HRD연구", v:"28(3)", tags:[]},
   {y:2026, a:"<strong>임경애</strong>", t:"2차 베이비부머 임금근로자의 직무만족 종단적 변화와 영향요인 분석", j:"평생교육·HRD연구", v:"22(3)", tags:["종단분석"]},
   {y:2026, a:"<strong>임경애</strong>, 이윤수", t:"랜덤 포레스트를 활용한 저경력 교사의 이직 의도 예측 요인 분석", j:"한국교원교육연구", v:"43(1)", tags:["머신러닝"]},
