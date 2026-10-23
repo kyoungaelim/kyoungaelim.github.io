@@ -1,14 +1,14 @@
 // 논문 목록 (홈 대표 논문, 논문 목록에서 함께 사용)
-// 새 논문은 맨 위에 한 줄 추가: y 연도, a 저자, t 제목, j 학술지, v 권(호), pg 페이지, d 게재일, doi(있으면), tags 필터용
+// 새 논문은 맨 위에 한 줄 추가: y 연도, a 저자, t 제목, j 학술지, v 권(호), pg 페이지, d 게재일, doi(있으면), intl:true(국제 학술지만), tags 필터용
 const PUBS = [
-  {y:2026, a:"Yoo, S., Kim, S., <strong>Lim, K.</strong>, & Lee, Y.", t:"Training investment indicators beyond cost: Analyzing the impact of training on organizational outcomes", j:"The International Journal of Human Resource Management", v:"37(11)", pg:"2138-2167", d:"2026.09.26", doi:"10.1080/09585192.2026.2737821", tags:[], featured:true},
+  {y:2026, a:"Yoo, S., Kim, S., <strong>Lim, K.</strong>, & Lee, Y.", t:"Training investment indicators beyond cost: Analyzing the impact of training on organizational outcomes", j:"The International Journal of Human Resource Management", v:"37(11)", pg:"2138-2167", d:"2026.09.26", doi:"10.1080/09585192.2026.2737821", intl:true, tags:[], featured:true},
   {y:2026, a:"<strong>임경애</strong>", t:"2차 베이비부머 근로자의 일중독과 직무만족의 관계: 자아존중감과 직무 불안정성의 조절된 매개효과", j:"HRD연구", v:"28(3)", pg:"61-89", d:"2026.08.31", tags:["매개 및 조절"]},
   {y:2026, a:"<strong>임경애</strong>", t:"2차 베이비부머 임금근로자의 직무만족 종단적 변화와 영향요인 분석: 잠재성장모형 적용", j:"평생교육·HRD연구", v:"22(3)", pg:"101-129", d:"2026.07.31", tags:["종단분석"]},
   {y:2026, a:"<strong>임경애</strong>, 이윤수", t:"랜덤 포레스트를 활용한 저경력 교사의 이직 의도 예측 요인 분석", j:"한국교원교육연구", v:"43(1)", pg:"1-29", d:"2026.03.31", tags:["머신러닝"]},
   {y:2026, a:"<strong>임경애</strong>, 임주형, 배수완, 이윤수", t:"랜덤 포레스트를 활용한 과학기술인의 주관적 경력 성공 예측 요인 분석", j:"역량개발학습연구", v:"21(1)", pg:"1-35", d:"2026.03.31", tags:["머신러닝"]},
   {y:2026, a:"남민지, 이윤수, <strong>임경애</strong>", t:"도움제공 행동, 도움요청 행동 및 감정 노동의 잠재 프로파일 분석: 프로파일별 번아웃 차이 분석", j:"한국심리학회지: 산업 및 조직", v:"39(1)", pg:"201-228", d:"2026.02.28", tags:["잠재프로파일"]},
   {y:2025, a:"<strong>임경애</strong>, 이윤수", t:"대학 교수의 직무 만족 유형에 따른 조직 몰입 수준 차이: 잠재 프로파일 분석 적용", j:"한국교원교육연구", v:"42(2)", pg:"52-82", d:"2025.06.30", tags:["잠재프로파일"]},
-  {y:2025, a:"Yoo, S., Lee, Y., Jung, B., & <strong>Lim, K.</strong>", t:"Cultivating “good work”: Validating organizational culture profile in South Korea", j:"European Journal of Training and Development", v:"49(9)", pg:"929-951", d:"2025.04.04", doi:"10.1108/EJTD-10-2024-0150", tags:["측정도구 타당화"], featured:true},
+  {y:2025, a:"Yoo, S., Lee, Y., Jung, B., & <strong>Lim, K.</strong>", t:"Cultivating “good work”: Validating organizational culture profile in South Korea", j:"European Journal of Training and Development", v:"49(9)", pg:"929-951", d:"2025.04.04", doi:"10.1108/EJTD-10-2024-0150", intl:true, tags:["측정도구 타당화"], featured:true},
   {y:2025, a:"김유빈, <strong>임경애</strong>, 이윤수", t:"고등학교 교사의 디지털 역량 및 교육 환경과 인공지능 수업 효과에 대한 잠재 프로파일 분석", j:"아시아교육연구", v:"26(1)", pg:"197-221", d:"2025.03.31", tags:["잠재프로파일"]},
   {y:2024, a:"김민선, <strong>임경애</strong>, 이윤수", t:"임파워링 리더십과 직무 번영감의 관계에서 심리적 안정감의 조절효과: 잠재 조절 구조방정식 적용", j:"역량개발학습연구", v:"19(2)", pg:"1-27", d:"2024.06.25", tags:["매개 및 조절"]},
   {y:2024, a:"엄회정, <strong>임경애</strong>, 이윤수", t:"성과 압박, 직원 성장 분위기(EGC)와 직무 열의의 관계에서 잡 크래프팅의 매개효과", j:"HRD연구", v:"26(2)", pg:"31-61", d:"2024.05.31", tags:["매개 및 조절"]},
@@ -60,7 +60,7 @@ if (feat){
 const list = document.getElementById("pub-list");
 if (list){
   const isFirst = p => p.a.startsWith("<strong>");
-  const isIntl = p => /^[A-Za-z]/.test(p.j);
+  const isIntl = p => p.intl === true;
   const byTag = t => p => p.tags.includes(t);
   const FILTERS = [
     {k:"all", label:"전체", f:()=>true},
