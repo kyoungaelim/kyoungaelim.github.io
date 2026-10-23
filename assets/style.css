@@ -81,7 +81,10 @@ h2 .count{margin-left:auto;font:400 12px var(--mono);color:var(--muted)}
 .pub .t{font-weight:600;line-height:1.55}
 .pub .a{font-size:14px;color:var(--muted)}
 .pub .a strong{color:var(--fg);font-weight:600;text-decoration:underline;text-decoration-color:var(--mark);text-underline-offset:3px}
-.pub .j{font-size:14px}
+.pub .j{font-size:14px;font-variant-numeric:tabular-nums}
+.pub .d{font:400 12px var(--mono);color:var(--muted);margin-left:10px;padding-left:10px;border-left:1px solid var(--line)}
+.doi{font:600 11px var(--body);letter-spacing:.06em;text-decoration:none;margin-left:8px;border:1px solid var(--line);border-radius:3px;padding:0 5px}
+.doi:hover{border-color:var(--accent)}
 .tags{display:inline-flex;gap:6px;flex-wrap:wrap;margin-left:6px;vertical-align:1px}
 .tag{font:500 11px var(--body);color:var(--accent);background:var(--accent-soft);padding:1px 7px;border-radius:3px}
 .featured{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
